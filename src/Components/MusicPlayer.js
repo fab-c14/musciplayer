@@ -5,6 +5,9 @@ import SeekBar from './SeekBar';
 import '../App.css';
 import mp1 from '../Songs/mp1.mp3';
 import mp2 from '../Songs/mp2.mp3';
+import mp3 from '../Songs/mp3.mp3';
+import mp4 from '../Songs/mp4.mp3';
+
 
 function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -17,7 +20,8 @@ function MusicPlayer() {
   const [playlist, setPlaylist] = useState([
     { title: 'Song 1', url: mp1 },
     { title: 'Song 2', url: mp2 },
-    // Add more songs as needed
+    { title: 'Song 3', url: mp3 },
+    { title: 'Song 4', url: mp4 },
   ]);
 
   const audioPlayerRef = useRef();
@@ -146,12 +150,13 @@ function MusicPlayer() {
         <Button color="orange" onClick={backwardHandler}>
           Backward
         </Button>
-        <Button color="red" onClick={() => skipSongHandler('next')}>
-          Next
-        </Button>
         <Button color="purple" onClick={forwardHandler}>
           Forward
         </Button>
+        <Button color="red" onClick={() => skipSongHandler('next')}>
+          Next
+        </Button>
+       
       </div>
       <div className="additional-controls">
         <Button
@@ -179,9 +184,11 @@ function MusicPlayer() {
           step={0.1}
           value={volume}
           onChange={volumeChangeHandler}
-          orient="vertical"
+          onMouseDown={(e) => e.stopPropagation()} // Prevent seek when adjusting volume
         />
       </div>
+
+
      
       <audio ref={audioPlayerRef} src={currentSong.url} />
       <div className="playlist">

@@ -102,3 +102,56 @@ body {
 .br2 {
   border-radius: 8px;
 }
+
+.volume-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items to the center horizontally */
+}
+
+.volume-control label {
+  margin-bottom: 5px;
+}
+
+/* Make the volume control smaller */
+.volume-control input {
+  width: 200px; /* Set the desired width */
+}
+
+/* Apply Tachyons classes for styling */
+.ma2 {
+  margin: 8px;
+}
+
+.pa2 {
+  padding: 8px;
+}
+
+.bg-light-blue {
+  background-color: #add8e6;
+  color: white;
+}
+
+.white {
+  color: white;
+}
+
+.br2 {
+  border-radius: 8px;
+}
+
+
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 100%; /* Set width to 100% */
+}
+
+.time-display p {
+  margin: 0; 
+  flex-grow: 1; 
+  text-align: center;
+}
+
