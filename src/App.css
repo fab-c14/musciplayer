@@ -1,0 +1,104 @@
+/* App.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.audio-controls {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.audio-controls.playing {
+  background: linear-gradient(90deg, #b3e0ff, #a2e10e, #067dc7);
+  background-size: 200% 100%;
+  animation: linearBackground 3s infinite;
+  transition: background 0.3s ease;
+}
+
+@keyframes linearBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+.song-info {
+  margin-bottom: 10px;
+}
+
+.progress-bar,
+.volume-control {
+  margin: 10px 0;
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.controls,
+.additional-controls,
+.playlist-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.additional-controls button,
+.playlist-controls button {
+  font-weight: bold;
+}
+
+/* Add a background color to the playing music section */
+.audio-controls.playing {
+  background-color: #b3e0ff; /* Light blue background */
+  transition: background-color 0.3s ease;
+}
+
+/* Style the vertical volume button */
+.volume-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.volume-control label {
+  margin-bottom: 5px;
+}
+
+/* Apply Tachyons classes for styling */
+.ma2 {
+  margin: 8px;
+}
+
+.pa2 {
+  padding: 8px;
+}
+
+.bg-light-blue {
+  background-color: #add8e6;
+  color: white;
+}
+
+.white {
+  color: white;
+}
+
+.br2 {
+  border-radius: 8px;
+}
